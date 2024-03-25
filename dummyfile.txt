@@ -1,4 +1,0 @@
-GerritHub demo.
-An edit.
-Another edit.
-Yet another edit.
