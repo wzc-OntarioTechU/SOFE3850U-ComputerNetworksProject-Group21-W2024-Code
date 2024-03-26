@@ -16,7 +16,7 @@ char* getFileData(struct pdu request, int *parts) {
     int *fd = fopen(request.data, "r");
     if (*fd < 0) {
         *parts = -1;
-        retun NULL;
+        return NULL;
     } else {
         int numChar = 0;
         while (feof(fd) == 0) {
@@ -76,7 +76,7 @@ int main(int argc, char *argv[]) {
 
     // open UDP port
     if ((socketFD = socket(AF_INET, SOCK_DGRAM, 0)) == NULL) {
-        perrorf("Failed to open socket.");
+        perror("Failed to open socket.");
         return 2;
     }
 
